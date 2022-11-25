@@ -5,18 +5,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { ViewTodoComponent } from './view-todo/view-todo.component';
+import { NavbarComponent } from "./navbar/navbar.component";
+import { RouterModule, Routes } from '@angular/router';
 
+const myRoutes:Routes = [
+    {
+        path:"",
+        component:AddTodoComponent
+    },
+    {
+        path:"view",
+        component:ViewTodoComponent
+    }
+]
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddTodoComponent,
-    ViewTodoComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AddTodoComponent,
+        ViewTodoComponent,
+        NavbarComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule.forRoot(myRoutes)
+    ]
 })
 export class AppModule { }
