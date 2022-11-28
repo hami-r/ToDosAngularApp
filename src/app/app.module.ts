@@ -7,6 +7,7 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 import { ViewTodoComponent } from './view-todo/view-todo.component';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const myRoutes:Routes = [
     {
@@ -30,7 +31,8 @@ const myRoutes:Routes = [
     imports: [
         BrowserModule,
         AppRoutingModule,
-        RouterModule.forRoot(myRoutes)
+        RouterModule.forRoot(myRoutes),
+        FormsModule
     ]
 })
 export class AppModule { }
