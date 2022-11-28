@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AddTodoComponent {
 
+  userId = ""
+  id = ""
+  title = ""
+  completedStatus = ""
+
+  readValues = () => {
+    let data:any = {
+      "userId":this.userId,
+      "id":this.id,
+      "title":this.title,
+      "completedStatus":this.completedStatus
+    }
+    console.log(data);
+    
+  }
 }
